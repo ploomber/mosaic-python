@@ -14,6 +14,11 @@ https://github.com/user-attachments/assets/dc4b9c4d-2381-4251-b926-cd9a6f4ad244
 pip install dash-mosaic-ploomber
 ```
 
+<details>
+<summary>Why?</summary>
+`dash-mosaic` is already taken on PyPI.
+</details>
+
 ### Usage
 
 ```python
