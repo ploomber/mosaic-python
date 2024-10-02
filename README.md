@@ -11,7 +11,7 @@ Python bindings for [Mosaic](https://github.com/uwdata/mosaic/)
 https://github.com/user-attachments/assets/dc4b9c4d-2381-4251-b926-cd9a6f4ad244
 
 ```sh
-pip install dash-mosaic
+pip install dash-mosaic-ploomber
 ```
 
 ### Usage
