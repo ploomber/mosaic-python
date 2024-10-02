@@ -1,0 +1,11 @@
+include dash_mosaic/dash_mosaic.min.js
+include dash_mosaic/dash_mosaic.min.js.map
+include dash_mosaic/async-*.js
+include dash_mosaic/async-*.js.map
+include dash_mosaic/*-shared.js
+include dash_mosaic/*-shared.js.map
+include dash_mosaic/metadata.json
+include dash_mosaic/package-info.json
+include README.md
+include LICENSE
+include package.json
