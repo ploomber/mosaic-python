@@ -3,6 +3,8 @@
 Python bindings for [Mosaic](https://github.com/uwdata/mosaic/)
 
 1. [Dash Mosaic](#dash-mosaic) (component for [Dash](https://github.com/plotly/dash))
+2. Streamlit Mosaic (coming soon!)
+3. Mosaic Spec: Python implementation of [Mosaic Spec](https://idl.uw.edu/mosaic/spec/) (coming soon!)
 
 ## Dash Mosaic
 
