@@ -6,6 +6,10 @@ Python bindings for [Mosaic](https://github.com/uwdata/mosaic/)
 
 ## Dash Mosaic
 
+
+https://github.com/user-attachments/assets/dc4b9c4d-2381-4251-b926-cd9a6f4ad244
+
+
 Live demo: [mosaic.ploomberapp.io/dash](https://mosaic.ploomberapp.io/dash)
 
 ```sh
