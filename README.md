@@ -1,6 +1,21 @@
-# Mosaic Python
+<p align="center">
+    <h1 align="center"><b>Mosaic Python</b></h1>
+	<p align="center">
+		Python bindings for <a href="https://github.com/uwdata/mosaic/" target="_blank">Mosaic</a>
+    <br />
+    <br />
+    <br />
+    <img width="100" height="100" src="https://avatars.githubusercontent.com/u/60114551?s=200&v=4" alt="Ploomber Logo">
+    <br />
+    <b>  Made by <a href="https://ploomber.io/?utm_source=dash-mosaic&utm_medium=github">Ploomber</a> with ❤️</b>
+    <br />
+    <br />
+    <i>Deploy Streamlit and Dash apps on <a href="https://www.platform.ploomber.io/register/?utm_source=dash-mosaic&utm_medium=github">Ploomber.io</a> for free.</i>
+    <br />
+  </p>
+</p>
+<br/>
 
-Python bindings for [Mosaic](https://github.com/uwdata/mosaic/)
 
 1. [Dash Mosaic](#dash-mosaic) (component for [Dash](https://github.com/plotly/dash))
 2. Streamlit Mosaic (coming soon!)
