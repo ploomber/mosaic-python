@@ -16,7 +16,7 @@ pip install dash-mosaic-ploomber
 
 <details>
 <summary>Why?</summary>
-`dash-mosaic` is already taken on PyPI.
+dash-mosaic is already taken on PyPI.
 </details>
 
 ### Usage
