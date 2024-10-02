@@ -22,22 +22,16 @@ def create_mosaic_item(title, spec, uri, id, description=None):
 
     component_code = f"""from dash import Dash, html
 import dash_mosaic
-import dash_material_ui as mui
 
 app = Dash(__name__)
 
 {formatted_spec}
 
 app.layout = html.Div([
-    mui.Item(
-        children=[
-            dash_mosaic.DashMosaic(
-                id='{id}',
-                spec=spec,
-                uri={uri!r},
-            )
-        ],
-        size=8,
+    dash_mosaic.DashMosaic(
+        id='{id}',
+        spec=spec,
+        uri={uri!r},
     )
 ])
 
