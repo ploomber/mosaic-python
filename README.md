@@ -18,12 +18,14 @@
 
 
 1. [Dash Mosaic](#dash-mosaic) (component for [Dash](https://github.com/plotly/dash))
-2. Streamlit Mosaic (coming soon!)
+2. [Streamlit Mosaic](#streamlit-mosaic)
 3. Mosaic Spec: Python implementation of [Mosaic Spec](https://idl.uw.edu/mosaic/spec/) (coming soon!)
 
 ## Dash Mosaic
 
 https://github.com/user-attachments/assets/dc4b9c4d-2381-4251-b926-cd9a6f4ad244
+
+### Installation
 
 ```sh
 pip install dash-mosaic-ploomber
@@ -148,8 +150,6 @@ if __name__ == "__main__":
 
 ### Demo
 
-Run demo locally:
-
 ```sh
 cd dash-mosaic/demo
 pip install -r requirements.txt
@@ -157,3 +157,104 @@ python app.py
 ```
 
 Open: http://localhost:8050
+
+## Streamlit Mosaic
+
+### Installation
+
+```sh
+pip install streamlit-mosaic
+```
+
+### Usage
+
+```python
+import streamlit as st
+from streamlit_mosaic import mosaic
+
+# your mosaic spec as a dictionary
+spec = {...}
+mosaic(spec=spec, height=600)
+```
+
+
+
+<details>
+<summary>Click to expand full code example</summary>
+
+```python
+import streamlit as st
+from streamlit_mosaic import mosaic
+
+spec = {
+    "meta": {
+        "title": "Interactive Penguin Bill Measurements",
+        "description": "Scatterplot of bill length vs depth with interactive selection",
+    },
+    "data": {
+        "penguins": {
+            "type": "parquet",
+            "file": "https://raw.githubusercontent.com/uwdata/mosaic/refs/heads/main/data/penguins.parquet",
+        }
+    },
+    "params": {
+        "brush": {"select": "crossfilter"},
+        "domain": ["Adelie", "Chinstrap", "Gentoo"],
+        "colors": ["#1f77b4", "#ff7f0e", "#2ca02c"],
+    },
+    "vconcat": [
+        {
+            "name": "scatterplot",
+            "width": 600,
+            "height": 400,
+            "xLabel": "Bill Length (mm) →",
+            "yLabel": "↑ Bill Depth (mm)",
+            "colorDomain": "$domain",
+            "colorRange": "$colors",
+            "plot": [
+                {
+                    "fill": "species",
+                    "x": "bill_length",
+                    "y": "bill_depth",
+                    "data": {"from": "penguins", "filterBy": "$brush"},
+                    "mark": "dot",
+                },
+                {"as": "$brush", "select": "intervalXY"},
+            ],
+        },
+        {
+            "name": "species_count",
+            "width": 600,
+            "height": 200,
+            "xLabel": "Penguin Species →",
+            "yLabel": "↑ Count",
+            "colorDomain": "$domain",
+            "colorRange": "$colors",
+            "plot": [
+                {
+                    "fill": "species",
+                    "y": {"count": None},
+                    "x": "species",
+                    "data": {"from": "penguins", "filterBy": "$brush"},
+                    "mark": "barY",
+                }
+            ],
+        },
+    ],
+}
+
+mosaic(spec=spec, height=600)
+```
+
+</details>
+
+### Demo
+
+```sh
+cd streamlit-mosaic/demo
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+
+Open: http://localhost:8501
