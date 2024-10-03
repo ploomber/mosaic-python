@@ -55,6 +55,8 @@ app.layout = html.Div(
             # if None, it'll use DuckDB WASM. If a string, it'll use the
             # restConnector (if the url begins with "http") or the
             # socketConnector (if it begins with "ws")
+            # **IMPORTANT** if you want to load a local file, you cannot pass
+            # uri=None. See the latest section in the README.md
             uri=None,
         )
     ]
@@ -137,6 +139,8 @@ app.layout = html.Div(
         dash_mosaic.DashMosaic(
             id="penguin-plot",
             spec=spec,
+            # **IMPORTANT** if you want to load a local file, you cannot pass
+            # uri=None. See the latest section in the README.md
             uri=None,
         )
     ]
@@ -184,6 +188,8 @@ mosaic(spec=spec,
         # if None, it'll use DuckDB WASM. If a string, it'll use the
         # restConnector (if the url begins with "http") or the
         # socketConnector (if it begins with "ws")
+        # **IMPORTANT** if you want to load a local file, you cannot pass
+        # uri=None. See the latest section in the README.md
        uri=None)
 ```
 
@@ -253,7 +259,9 @@ spec = {
     ],
 }
 
-mosaic(spec=spec, height=600)
+# **IMPORTANT** if you want to load a local file, you cannot pass
+# uri=None. See the latest section in the README.md
+mosaic(spec=spec, height=600, uri=None)
 ```
 
 </details>
@@ -268,3 +276,16 @@ streamlit run app.py
 
 
 Open: http://localhost:8501
+
+## Loading local files
+
+If you want to visualize local files with `dash-mosaic` or `streamlit-mosaic`, passing
+`uri=None` **won't work**. Instead, you can pass: `http://localhost:3000` and run
+the `duckdb-server`:
+
+```sh
+pip install duckdb-server
+duckdb-server
+```
+
+Read more in [Mosaic's documentation](https://idl.uw.edu/mosaic/server/).
