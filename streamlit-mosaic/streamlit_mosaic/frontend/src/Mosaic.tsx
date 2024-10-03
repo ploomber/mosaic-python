@@ -16,6 +16,8 @@ function Mosaic() {
   const chartRef = useRef<HTMLDivElement | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
+
+
   useEffect(() => {
     const renderChart = async () => {
       if (chartRef.current) {
@@ -61,7 +63,7 @@ function Mosaic() {
   return (
     <div>
       {isLoading ? (
-        <div className="loading-message">
+        <div className="loading-message" style={{ height: 50 }}>
           <p>Loading<span className="loading-dots">
             <span>.</span><span>.</span><span>.</span>
           </span></p>
