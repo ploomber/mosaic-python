@@ -19,12 +19,15 @@ plot_choice = st.radio(
     ("Penguin Data", "Flights 10M", "Voronoi Diagram", "Stock Prices"),
 )
 
+uri = None
+# uri = "http://localhost:3000"
+
 # Display the chosen plot
 if plot_choice == "Penguin Data":
-    mosaic(spec=basic, height=600)
+    mosaic(spec=basic, height=600, uri=uri)
 elif plot_choice == "Flights 10M":
-    mosaic(spec=flights_10m, height=600)
+    mosaic(spec=flights_10m, height=600, uri=uri)
 elif plot_choice == "Voronoi Diagram":
-    mosaic(spec=vonoroi, height=680)
+    mosaic(spec=vonoroi, height=680, uri=uri)
 else:
-    mosaic(spec=stock, height=400)
+    mosaic(spec=stock, height=400, uri=uri)
