@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="streamlit-mosaic",
-    version="0.0.1",
+    version="0.0.2",
     author="Ploomber Inc.",
     author_email="contact@ploomber.io",
     description="Mosaic for Streamlit",
