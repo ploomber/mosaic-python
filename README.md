@@ -18,7 +18,7 @@
 
 
 1. [Dash Mosaic](#dash-mosaic) (component for [Dash](https://github.com/plotly/dash))
-2. [Streamlit Mosaic](#streamlit-mosaic)
+2. [Streamlit Mosaic](#streamlit-mosaic) (component for [Streamlit](https://github.com/streamlit/streamlit))
 3. Mosaic Spec: Python implementation of [Mosaic Spec](https://idl.uw.edu/mosaic/spec/) (coming soon!)
 
 ## Dash Mosaic
@@ -174,7 +174,13 @@ from streamlit_mosaic import mosaic
 
 # your mosaic spec as a dictionary
 spec = {...}
-mosaic(spec=spec, height=600)
+
+mosaic(spec=spec,
+       height=600,
+        # if None, it'll use DuckDB WASM. If a string, it'll use the
+        # restConnector (if the url begins with "http") or the
+        # socketConnector (if it begins with "ws")
+       uri=None)
 ```
 
 
