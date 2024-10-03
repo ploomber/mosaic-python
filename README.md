@@ -160,6 +160,10 @@ Open: http://localhost:8050
 
 ## Streamlit Mosaic
 
+
+https://github.com/user-attachments/assets/b018d900-7515-45ef-b708-8223d3f3df5c
+
+
 ### Installation
 
 ```sh
