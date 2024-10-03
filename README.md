@@ -7,10 +7,10 @@
     <br />
     <img width="100" height="100" src="https://avatars.githubusercontent.com/u/60114551?s=200&v=4" alt="Ploomber Logo">
     <br />
-    <b>  Made by <a href="https://ploomber.io/?utm_source=dash-mosaic&utm_medium=github">Ploomber</a> with ❤️</b>
+    <b>  Made by <a href="https://ploomber.io/?utm_source=mosaic-python&utm_medium=github">Ploomber</a> with ❤️</b>
     <br />
     <br />
-    <i>Deploy Streamlit and Dash apps on <a href="https://www.platform.ploomber.io/register/?utm_source=dash-mosaic&utm_medium=github">Ploomber.io</a> for free.</i>
+    <i>Deploy Streamlit and Dash apps on <a href="https://www.platform.ploomber.io/register/?utm_source=mosaic-python&utm_medium=github">Ploomber.io</a> for free.</i>
     <br />
   </p>
 </p>

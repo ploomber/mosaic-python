@@ -111,7 +111,7 @@ app.layout = mui.App(
                     "Made with ❤️ by ",
                     html.A(
                         "Ploomber",
-                        href="https://ploomber.io/?utm_source=dash-mosaic&utm_medium=demo",
+                        href="https://ploomber.io/?utm_source=mosaic-python&utm_medium=demo",
                         target="_blank",
                     ),
                 ]
