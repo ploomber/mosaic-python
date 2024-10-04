@@ -19,7 +19,7 @@
 
 1. [Dash Mosaic](#dash-mosaic) (component for [Dash](https://github.com/plotly/dash))
 2. [Streamlit Mosaic](#streamlit-mosaic) (component for [Streamlit](https://github.com/streamlit/streamlit))
-3. Mosaic Spec: Python implementation of [Mosaic Spec](https://idl.uw.edu/mosaic/spec/) (coming soon!)
+3. [Mosaic Spec Generator](https://ploomber.github.io/mosaic-spec-generator/) free tool to generate Mosaic plots
 
 ## Dash Mosaic
 
